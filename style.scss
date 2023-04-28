@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+html{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    height: 2000px;
+}
+body{
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+.page-title{
+    background-color: #252525;
+    color: #fff;
+    width:fit-content;
+    padding: 10px 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
+    animation: change-color 10s linear infinite;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.scroll-width{
+    background-color: #252525;
+    height: 5px;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 453;
+}
+@keyframes change-color{
+    0%{
+        background-color: #252525;
+        color: #fff;
+    }
+    50%{
+        background-color: #fff;
+        color: #252525;
+    }
+    100%{
+        background-color: #252525;
+        color: #fff;
+    }
+}
+
+
+.section1{
+    .btn{
+        background-color: #252525;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &.active{
+            margin-left: 210px;
+            transition: all 0.2s linear;
+        }
+    }
+    
+    .slide{
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        background-color: #252525;
+        color: #eee;
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid #fff;
+        overflow: hidden;
+        transition: all 0.2s linear;
+        position: fixed;
+        left:-210px;
+        top: 0;
+        &.active{
+            left:0;
+            transition: all 0.2s linear;
+        }
+    }
+}
+
+button{
+    border: none;
+    .scroll{
+        text-decoration: none;
+        color:white;
+        padding: 10px;
+        border-radius:10px;
+        background-color: #252525;
+        position:fixed;
+        bottom: 12px;
+        right: 12px;
+    }
+}
